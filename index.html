@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+
+    <main>
+        <input type="text"id="inp" style="font-size: 30px;"><br>
+        <button id="btn" onclick="start()" style="margin-top: 1%; font-size: 25px;">Speak</button>
+
+    </main>
+<script>
+
+    let btn = document.querySelector("#btn")
+    const start = () =>{
+        let inp = document.querySelector("#inp").value;
+        let utterance =  
+        new SpeechSynthesisUtterance(inp);
+        window.speechSynthesis.speak(utterance);
+      
+    }
+
+</script>
+
+</body>
+
+</html>
